@@ -1,0 +1,62 @@
+.explore-online {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  &__cards {
+    @include page-grid;
+
+    row-gap: 48px;
+
+    @include on-desktop {
+      column-gap: 24px;
+      align-items: start;
+    }
+  }
+
+  &__photo {
+    max-width: 280px;
+
+    @include on-tablet {
+      max-width: 392px;
+    }
+
+    @include on-desktop {
+      max-width: 324px;
+    }
+  }
+
+  &__title {
+    margin: 24px 0 4px;
+
+    font-size: 24px;
+    font-weight: 700;
+    font-style: Bold;
+    line-height: 140%;
+    color: $main-accent-color;
+    letter-spacing: 0;
+
+    @include on-tablet {
+      margin-top: 32px;
+    }
+  }
+
+  &__info {
+    margin: 0;
+  }
+
+  &__card {
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: 2 / -2;
+    }
+
+    @include on-desktop {
+      grid-column: span 4;
+    }
+  }
+}
