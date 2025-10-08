@@ -1,3 +1,18 @@
-// .footer{
+.footer {
+  height: 30vh;
 
-// }
+  background-image: url('../images/footer-mb.png');
+  background-repeat: no-repeat;
+  background-position: start;
+  background-size: cover;
+
+  @include on-tablet {
+    // height: 50vh;
+    height: 40vh;
+  }
+
+  @include on-desktop {
+    height: 60vh;
+    background-image: url('../images/footer.png');
+  }
+}

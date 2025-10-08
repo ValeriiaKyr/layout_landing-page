@@ -16,6 +16,14 @@
     display: block;
 
     &--wide {
+      &:first-child {
+        object-position: 30%;
+      }
+
+      &:last-child {
+        object-position: 100%;
+      }
+
       @include on-tablet {
         grid-column: span 4;
       }
